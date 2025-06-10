@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .bgcolor{
+                background:rgb(48, 47, 47);
+                color:#fff
+
+            }
+
+        </style>
+       
+    </head>
+    <body class="bgcolor">
+        <div>
+            <h1 id="title" class="heading">Dom Practice<span style="display:none">test text</span></h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+
+        </div>
+        <div class="parent">
+            <div class="days">Monday</div>
+            <div class="days">Tuesday</div>
+            <div class="days">Wednesday</div>
+            <div class="days">Thursday</div>
+        </div>
+<!-- .innerText //not give hidden valuelike displan noneabove
+.innertextContent //give entire te4xt even hidden value
+.innerHTML //give html like span also in output -->
+
+
+    
+    </body>
+</html>
+<script>
+    const parent=document.querySelector('.parent');
+    
+    for(let i=0;i<parent.children.length;i++){
+        console.log(parent.children[i].innerText);
+
+    }
+</script>
+
