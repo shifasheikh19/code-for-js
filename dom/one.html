@@ -30,16 +30,34 @@
 .innertextContent //give entire te4xt even hidden value
 .innerHTML //give html like span also in output -->
 
-
+        <ul class="language">
+            <li>
+                js
+            </li>
+        </ul>
     
     </body>
 </html>
 <script>
     const parent=document.querySelector('.parent');
     
-    for(let i=0;i<parent.children.length;i++){
-        console.log(parent.children[i].innerText);
+    // for(let i=0;i<parent.children.length;i++){
+    //     console.log(parent.children[i].innerText);
+
+    // }
+    function addlang(language){
+        const li=document.createElement('li');
+        li.innerHTML=`${language}`;
+        document.querySelector('.language').appendChild(li);
 
     }
+    addlang("python");
+
+    function OptLang(language){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(language));
+
+    }
+    OptLang("Ruby");
 </script>
 
