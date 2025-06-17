@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <h1>Chai aur Code</h1>
+        <button id="stop">Stop</button>
+        <button id="start">Start</button>
+       
+
+    
+    </body>
+    <script>
+        // const sayDate=function(str){
+        //     console.log(Date.now(),str);
+        // }
+        // const intervalValid=setInterval(sayDate,1000,"hi")
+        // clearInterval(intervalValid);
+        let stopInterval;
+        const bt1=document.querySelector('#start');
+        const sayMe=function(str){
+            console.log(`shifa ${str}`)
+        }
+        bt1.addEventListener('click',()=>{
+            stopInterval=setInterval(sayMe,1000,"hi")
+
+        })
+        const bt2=document.querySelector('#stop');
+        bt2.addEventListener('click',()=>{
+            clearInterval(stopInterval);
+        })
+
+        
+    </script>
+</html>

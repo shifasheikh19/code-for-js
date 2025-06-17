@@ -4,15 +4,15 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        
     </head>
     <body style="background-color: black; color:aliceblue">
         <h2>Amazing images</h2>
         <div>
-            <ul>
+            <ul id="images">
                 <li><img width="100px" id="photoshop" src="../eagle.png" alt=""></li>
-                <li><img width="100px" id="hacker" src="../hacker.png" alt="" onclick="alert('hacker')"></li>
-                <li><img width="100px" id="mePic" src="../mePic.png" alt=""></li>
+                <li><img width="100px" id="hacker" src="../hacker.png" alt="" ></li>
+                
                 
             </ul>
         </div>
@@ -24,9 +24,21 @@
         // }not a good approcah not have propagation
 
         document.getElementById('hacker').addEventListener('click',(e)=>{
-            alert("owl clicked again")
+            alert("hacker clicked again")
 
         },false)
+         document.querySelector('#images').addEventListener('click',(e)=>{
+            console.log(e.target.tagName);
+            if(e.target.tagName==='IMG'){
+                let removeIt=e.target.parentNode
+                removeIt.remove()
+
+            }
+             
+
+
+        },false)
+       
 
         //attachEvent early time used 
         //jquery -on 

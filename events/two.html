@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Async practice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <h1>Chai aur Code</h1>
+        <button id="stop">Stop</button>
+    
+    </body>
+    <script>
+        const sayShifa=function(){
+            console.log("Shifa")
+        }
+        const changeText=function(){document.querySelector('h1').innerHTML="Best file"};
+        const changeMe=setTimeout(changeText,3000);//will still be called een if in variable
+        setTimeout(sayShifa,2000);
+        const button=document.querySelector('button');
+        
+        button.addEventListener('click',()=>{
+            clearTimeout(changeMe)
+            console.log("stopped");
+
+        })
+    </script>
+</html>
