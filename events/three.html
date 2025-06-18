@@ -34,6 +34,61 @@
             clearInterval(stopInterval);
         })
 
+//         project solution 
+
+
+
+//         const randomColor = function () {
+//   const hex = '0123456789ABCDEF';
+//   let color = '#';
+//   for (let i = 0; i < 6; i++) {
+//     color += hex[Math.floor(Math.random() * 16)];
+//   }
+//   return color;
+// };
+// console.log(randomColor());
+// function changeBackgroundColor(){
+//   document.body.style.backgroundColor = randomColor();
+// }
+// let stop;
+// const stopChangingColor = function () {
+//   clearInterval(stop);
+//   stop=null;//releases varibale as not in use 
+// };
+// const startChangingColor = function () {
+//   if(!stop){
+//     stop=setInterval(changeBackgroundColor,1000); eveerytime set interval new id created if we click start 3 tiem old id will be lost so to stop id cant be used and we cant stop so we reassign value  only oif stop is earlier null
+
+
+//   }
+  
+  
+// };
+// document.querySelector('#start').addEventListener('click', startChangingColor);
+// document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
+
+// project 5 
+
+// const insert=document.getElementById('insert');
+// window.addEventListener('keydown',(e)=>{
+//   insert.innerHTML=`<table>
+//   <tr>
+//     <th>Key</th>
+//     <th>Code</th>
+   
+//   </tr>
+//   <tr>
+   
+//     <td>${e.key===" "?'Space':e.key}</td>
+//     <td>${e.code}</td>
+//   </tr>
+  
+// </table>`
+
+// })
+
+
         
     </script>
 </html>
